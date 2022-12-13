@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <style>
+      body {
+        background-color: #c2c2c2;
+        font-family: sans-serif;
+      }
+      .note-input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      #title {
+        padding: 0.4em;
+      }
+      .notes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .card {
+        background-color: #fff;
+        padding: 1em;
+        border-radius: 0.6rem;
+        display: grid;
+        gap: 0.5rem;
+      }
+      .title {
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+      .note-data {
+        color: grey;
+        font-size: 0.9rem;
+      }
+      .btn {
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.5rem;
+      }
+      .card:hover .edit,
+      .card:hover .delete {
+        visibility: visible;
+      }
+      button {
+        border: 0;
+        background: transparent;
+        padding: 0.2em 0.4em;
+        outline: 0;
+        border-radius: 0.3rem;
+      }
+      .add,
+      .update {
+        border: 1px solid green;
+      }
+      .add:hover,
+      .update:hover {
+        background-color: green;
+        color: #fff;
+      }
+      .edit {
+        visibility: hidden;
+        border: 1px solid blue;
+      }
+      .delete {
+        visibility: hidden;
+        border: 1px solid red;
+      }
+      .edit:hover {
+        background-color: blue;
+        color: #fff;
+      }
+      .delete:hover {
+        color: #fff;
+        background-color: red;
+      }
+      p {
+        margin-right: auto;
+        font-size: .8rem;
+        color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="note-input">
+      <input type="text" name="title" id="title" placeholder="Title" />
+      <textarea class="note" name="" id="" cols="50" rows="4"></textarea>
+      <button class="add">ADD</button>
+      <button class="update">UPDATE</button>
+    </div>
+    <div class="notes">
+      <!-- renderring -->
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
